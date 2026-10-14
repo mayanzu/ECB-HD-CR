@@ -1,0 +1,38 @@
+{
+  "title": "ECB-HD-CR reproducibility package",
+  "version": "1.0.0",
+  "prepared_date": "2026-10-14",
+  "public_identifier": "https://github.com/mayanzu/ECB-HD-CR",
+  "publication_status": "Public GitHub repository",
+  "authors": [
+    "Zhongjun Ma",
+    "Jiayue Sun",
+    "Pengfei Feng",
+    "Kangkang Zou"
+  ],
+  "related_manuscript_title": "Two-timescale closed-loop energy-credit scheduling and routing for energy-harvesting wireless sensor networks",
+  "raw_runs": {
+    "thesis_final_v7": 950,
+    "review_revision_v1": 300
+  },
+  "metadata_only_path_rewrites": 120,
+  "code_license": "MIT",
+  "third_party_data": "NSRDB; upstream terms apply",
+  "preserved_reference_figures": "Original geometry and style retained; ECB mechanism time index, cycle-length subscript and conditional-bound wording synchronized with manuscript",
+  "excluded": [
+    "manuscript",
+    "reviewer responses",
+    "revision notes",
+    "parameter-search/tuning scripts",
+    "obsolete result versions",
+    "smoke results",
+    "local logs",
+    "caches",
+    "git history"
+  ],
+  "numerical_changes": "None; only local NSRDB path metadata normalized and unused input rows omitted",
+  "figure_notation_revision_date": "2026-10-14",
+  "repository_url": "https://github.com/mayanzu/ECB-HD-CR",
+  "published_date": "2026-10-14",
+  "persistent_archive_doi": null
+}

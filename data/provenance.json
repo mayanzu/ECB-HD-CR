@@ -1,0 +1,31 @@
+{
+  "source": "National Solar Radiation Database (NSRDB)",
+  "source_url": "https://nsrdb.nlr.gov/",
+  "api_documentation": "https://developer.nlr.gov/docs/solar/nsrdb/",
+  "source_metadata_version": "3.2.0",
+  "location_id": "1096422",
+  "latitude": 31.81,
+  "longitude": 117.22,
+  "metadata_time_zone": 0,
+  "metadata_local_time_zone": 8,
+  "first_observation": [
+    "2015",
+    "1",
+    "1",
+    "0",
+    "30"
+  ],
+  "last_observation": [
+    "2015",
+    "1",
+    "21",
+    "19",
+    "30"
+  ],
+  "observations": 500,
+  "original_file_sha256": "b78b416c2bdb46473eb8239dc69a2204c250c921996a280de1d94f5091a22525",
+  "excerpt_sha256": "15bed67929966301b9ec039566c2273bb102112770f292a1a65c8413a53a5caf",
+  "transformation": "First 500 data rows retained verbatim with original two metadata rows and column header; LF newlines.",
+  "replay": "One hourly GHI observation per simulation round; 60-second energy integration and scenario scaling.",
+  "rights": "Third-party input retains upstream terms; the project MIT software license does not relicense NSRDB data."
+}

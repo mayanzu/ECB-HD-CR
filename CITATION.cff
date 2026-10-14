@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Please cite the associated paper and this versioned reproducibility package."
+type: software
+title: "ECB-HD-CR: Two-timescale closed-loop energy-credit scheduling and routing for energy-harvesting wireless sensor networks"
+version: 1.0.0
+authors:
+  - family-names: Ma
+    given-names: Zhongjun
+    orcid: "https://orcid.org/0000-0002-1659-9834"
+  - family-names: Sun
+    given-names: Jiayue
+  - family-names: Feng
+    given-names: Pengfei
+  - family-names: Zou
+    given-names: Kangkang
+license: MIT
+keywords:
+  - energy-harvesting wireless sensor networks
+  - energy-credit scheduling
+  - Harris Hawks Optimization
+  - dueling double deep Q-network
+abstract: "Simulation and per-run evidence for ECB-HD-CR, with baseline, ablation, communication-cost, and relaxation-bound analyses. The MIT license applies to project software; third-party NSRDB input retains upstream terms."
+
+repository-code: "https://github.com/mayanzu/ECB-HD-CR"
+url: "https://github.com/mayanzu/ECB-HD-CR"
+date-released: "2026-10-14"

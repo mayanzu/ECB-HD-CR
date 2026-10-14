@@ -1,0 +1,24 @@
+{
+  "weights": {
+    "completion": 0.45,
+    "lifetime": 0.35,
+    "energy": 0.2
+  },
+  "energy_reference_J": 0.0001,
+  "bound": "Tracewise hindsight relaxation; not an exact causal optimum",
+  "deployment_runs": 300,
+  "seeds_per_cell": 10,
+  "protocol": {
+    "telemetry_base_bits": 128,
+    "per_task_descriptor_bits": 32,
+    "routing_command_bits": 64,
+    "periodic_topology_bits": 64,
+    "ecb_transaction_bits": "256 uplink + 256 downlink"
+  },
+  "omitted": [
+    "processor energy",
+    "contention",
+    "retransmissions",
+    "extra recovery signaling"
+  ]
+}

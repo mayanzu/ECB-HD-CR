@@ -1,0 +1,48 @@
+{
+  "raw_runs": 1250,
+  "legacy_runs": 950,
+  "deployment_runs": 300,
+  "invariant_tests": 18,
+  "original_bound_audits": 110,
+  "compared_reference_csvs": 28,
+  "numerical_reference_match": true,
+  "figures_generated": true,
+  "comparison_rtol": 1e-10,
+  "comparison_atol": 1e-12,
+  "outputs": "artifacts/",
+  "published_reference_files_unchanged": true,
+  "validation_date": "2026-10-14",
+  "validation_environment": "environment.json",
+  "validation_scope": "Fresh archive extraction; supplied-record reproduction plus 30 new 60-round smoke runs",
+  "raw_numerical_fields_equal_to_author_source": true,
+  "raw_records_identical_bytes": 1130,
+  "raw_path_metadata_rewrites": 120,
+  "preserved_algorithm_core_test_files": 20,
+  "simulation_engine_function_AST_unchanged": true,
+  "full_experiment_job_counts": {
+    "legacy": 950,
+    "deployment": 300
+  },
+  "smoke_runs": 30,
+  "smoke_rounds": 60,
+  "smoke_seeds_per_cell": 1,
+  "input_excerpt_500_GHI_and_harvest_values_identical": true,
+  "preserved_reference_figure_files": 12,
+  "author_local_paths_or_email_in_text_files": [],
+  "public_deposit_status": "Public GitHub repository; no Zenodo DOI assigned",
+  "validation_limits": "Validation on the recorded Windows/Python environment; no second full 1250-run rerun or cross-platform verification claimed.",
+  "final_notation_revision": {
+    "date": "2026-10-14",
+    "ecb_mechanism_matches_manuscript": true,
+    "svg_geometry_and_style_preserved": true,
+    "simulation_code_and_numerical_evidence_unchanged": true
+  },
+  "final_guideline_refinement": {
+    "date": "2026-10-14",
+    "original_svg_geometry_and_style_preserved": true,
+    "simulation_and_numeric_analysis_code_unchanged": true,
+    "reference_csv_and_raw_archive_bytes_unchanged": true,
+    "numerical_reconstruction_reused_from_verified_prior_validation": true
+  },
+  "repository_url": "https://github.com/mayanzu/ECB-HD-CR"
+}

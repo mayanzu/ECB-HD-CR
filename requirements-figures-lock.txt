@@ -1,0 +1,2 @@
+-r requirements-lock.txt
+cairosvg==2.9.0

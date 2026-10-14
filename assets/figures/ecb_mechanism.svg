@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 0 1560 560" width="1560" height="560"
+     font-family="Cambria, Times New Roman, Times, serif" font-size="34" fill="#111111">
+  <defs>
+    <marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111111"/></marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a0019"/></marker>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.2"/>
+      <feOffset dx="0" dy="1.4"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.22"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1680" height="560" fill="#ffffff"/>
+
+<text x="80" y="44" font-size="14" letter-spacing="1" fill="#555555">(a)  CYCLE CLOCK  -  k in {0, 1, ...},   T<tspan baseline-shift="sub" font-size="11">L</tspan> = 50 rounds</text>
+  <line x1="80" y1="58" x2="1620" y2="58" stroke="#111111" stroke-width="1"/>
+  <g font-size="15">
+    <line x1="200" y1="52" x2="200" y2="64" stroke="#111111" stroke-width="1"/>
+    <text x="200" y="80" text-anchor="middle">k &#8722; 1</text>
+    <line x1="690" y1="52" x2="690" y2="64" stroke="#111111" stroke-width="1"/>
+    <text x="690" y="80" text-anchor="middle">k</text>
+    <line x1="1180" y1="52" x2="1180" y2="64" stroke="#111111" stroke-width="1"/>
+    <text x="1180" y="80" text-anchor="middle">k + 1</text>
+    <line x1="1560" y1="52" x2="1560" y2="64" stroke="#111111" stroke-width="1"/>
+    <text x="1560" y="80" text-anchor="middle">...</text>
+  </g>
+
+  <!-- feedback: a5 (virtual quota) feeds the next cycle's clock -->
+  <path d="M1449,118 L1449,72 L1180,72 L1180,58"
+        stroke="#7a0019" stroke-width="1" fill="none" stroke-dasharray="5 3" marker-end="url(#arR)"/>
+  <text x="1314" y="84" font-size="15" fill="#7a0019" font-style="italic" text-anchor="middle">quota feeds the next cycle</text>
+
+  <rect x="80"   y="118" width="290" height="110" rx="5" ry="-55" fill="#ffffff" stroke="#111111" stroke-width="1.2" filter="url(#soft)"/>
+  <rect x="80"   y="118" width="290" height="22"  rx="5" ry="-55" fill="#111111"/>
+  <rect x="80"   y="134" width="290" height="6"   fill="#111111"/>
+  <text x="225" y="135" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">a1.  Per-node bill</text>
+  <text x="225" y="186" text-anchor="middle" font-size="13.5" font-style="italic">E<tspan baseline-shift="sub" font-size="14">a,i</tspan>(k) = ∑<tspan baseline-shift="sub" font-size="11">t∈𝒯<tspan baseline-shift="sub" font-size="11">k</tspan></tspan> E<tspan baseline-shift="sub" font-size="11">sched,i</tspan>(t)</text>
+  <text x="225" y="220" text-anchor="middle" font-size="15" fill="#555555">Eq. (4.1)</text>
+
+  <rect x="386"  y="118" width="290" height="110" rx="5" ry="-55" fill="#ffffff" stroke="#111111" stroke-width="1.2" filter="url(#soft)"/>
+  <rect x="386"  y="118" width="290" height="22"  rx="5" ry="-55" fill="#111111"/>
+  <rect x="386"  y="134" width="290" height="6"   fill="#111111"/>
+  <text x="531" y="135" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">a2.  BS settle</text>
+  <text x="531" y="186" text-anchor="middle" font-size="13.5" font-style="italic">X(k) = |ℬ(k)|<tspan baseline-shift="super" font-size="14">−1</tspan> ∑<tspan baseline-shift="sub" font-size="11">i∈ℬ(k)</tspan> E<tspan baseline-shift="sub" font-size="11">a,i</tspan>(k)</text>
+  <text x="531" y="220" text-anchor="middle" font-size="15" fill="#555555">Eq. (4.5)</text>
+
+  <rect x="692"  y="118" width="290" height="110" rx="5" ry="-55" fill="#ffffff" stroke="#111111" stroke-width="1.2" filter="url(#soft)"/>
+  <rect x="692"  y="118" width="290" height="22"  rx="5" ry="-55" fill="#111111"/>
+  <rect x="692"  y="134" width="290" height="6"   fill="#111111"/>
+  <text x="837" y="135" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">a3.  Reference R(k)</text>
+  <text x="837" y="186" text-anchor="middle" font-size="13.5" font-style="italic">R(k+1) = (1 &#8722; &#951;<tspan baseline-shift="sub" font-size="14">c</tspan>) R(k) + &#951;<tspan baseline-shift="sub" font-size="14">c</tspan> X(k)</text>
+  <text x="837" y="220" text-anchor="middle" font-size="15" fill="#555555">Eq. (4.6); conditional tracking</text>
+
+  <rect x="998"  y="118" width="290" height="110" rx="5" ry="-55" fill="#ffffff" stroke="#111111" stroke-width="1.2" filter="url(#soft)"/>
+  <rect x="998"  y="118" width="290" height="22"  rx="5" ry="-55" fill="#111111"/>
+  <rect x="998"  y="134" width="290" height="6"   fill="#111111"/>
+  <text x="1143" y="135" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">a4.  Multipliers</text>
+  <text x="1143" y="186" text-anchor="middle" font-size="13.5" font-style="italic">g<tspan baseline-shift="sub" font-size="14">i</tspan>(k) = clip( h<tspan baseline-shift="sub" font-size="14">i</tspan>(k) · ρ<tspan baseline-shift="sub" font-size="14">i</tspan>(k), 0.1, 5 )</text>
+  <text x="1143" y="220" text-anchor="middle" font-size="15" fill="#555555">Eq. (4.7)</text>
+
+  <rect x="1304" y="118" width="290" height="110" rx="5" ry="-55" fill="#ffffff" stroke="#7a0019" stroke-width="1.4" filter="url(#soft)"/>
+  <rect x="1304" y="118" width="290" height="22"  rx="5" ry="-55" fill="#7a0019"/>
+  <rect x="1304" y="134" width="290" height="6"   fill="#7a0019"/>
+  <text x="1449" y="135" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">a5.  Virtual quota</text>
+  <text x="1449" y="186" text-anchor="middle" font-size="13.5" font-style="italic" fill="#7a0019">C<tspan baseline-shift="sub" font-size="14">i</tspan>(k+1) = κ R(k+1) · g<tspan baseline-shift="sub" font-size="14">i</tspan>(k)</text>
+  <text x="1449" y="220" text-anchor="middle" font-size="15" fill="#7a0019">Eq. (4.8)</text>
+
+  <line x1="370" y1="174" x2="386" y2="174" stroke="#111111" stroke-width="1" marker-end="url(#arB)"/>
+  <line x1="676" y1="174" x2="692" y2="174" stroke="#111111" stroke-width="1" marker-end="url(#arB)"/>
+  <line x1="982" y1="174" x2="998" y2="174" stroke="#111111" stroke-width="1" marker-end="url(#arB)"/>
+  <line x1="1288" y1="174" x2="1304" y2="174" stroke="#7a0019" stroke-width="1" stroke-dasharray="5 3" marker-end="url(#arR)"/>
+
+  <line x1="40" y1="244" x2="1600" y2="244" stroke="#bbbbbb" stroke-width="0.6"/>
+  <text x="80" y="268" font-size="14" letter-spacing="1" fill="#555555">(b)  ROUND CLOCK  -  t in cycle k  ::  pace every transmission</text>
+  <line x1="80" y1="282" x2="1620" y2="282" stroke="#111111" stroke-width="1"/>
+  <g font-size="14">
+    <line x1="280" y1="276" x2="280" y2="288" stroke="#111111" stroke-width="1"/>
+    <text x="280" y="304" text-anchor="middle">t</text>
+    <line x1="500" y1="276" x2="500" y2="288" stroke="#111111" stroke-width="1"/>
+    <text x="500" y="304" text-anchor="middle">t + 1</text>
+    <line x1="720" y1="276" x2="720" y2="288" stroke="#111111" stroke-width="1"/>
+    <text x="720" y="304" text-anchor="middle">...</text>
+    <line x1="980" y1="276" x2="980" y2="288" stroke="#111111" stroke-width="1"/>
+    <text x="980" y="304" text-anchor="middle">end of k</text>
+  </g>
+
+  <rect x="80"   y="332" width="290" height="110" rx="5" ry="-55" fill="#ffffff" stroke="#7a0019" stroke-width="1.4" filter="url(#soft)"/>
+  <rect x="80"   y="332" width="290" height="22"  rx="5" ry="-55" fill="#7a0019"/>
+  <rect x="80"   y="348" width="290" height="6"   fill="#7a0019"/>
+  <text x="225" y="347" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">b1.  Signed balance</text>
+  <text x="225" y="390" text-anchor="middle" font-size="13.5" font-style="italic">C<tspan baseline-shift="sub" font-size="14">i</tspan>(k) − E<tspan baseline-shift="sub" font-size="14">a,i</tspan><tspan baseline-shift="super" font-size="11">sofar</tspan>(t)</text>
+  <text x="225" y="422" text-anchor="middle" font-size="15" fill="#7a0019">Eq. (5.2); signed, may be negative</text>
+
+  <rect x="386"  y="332" width="290" height="110" rx="5" ry="-55" fill="#ffffff" stroke="#111111" stroke-width="1.2" filter="url(#soft)"/>
+  <rect x="386"  y="332" width="290" height="22"  rx="5" ry="-55" fill="#111111"/>
+  <rect x="386"  y="348" width="290" height="6"   fill="#111111"/>
+  <text x="531" y="347" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">b2.  Causality gate</text>
+  <text x="531" y="390" text-anchor="middle" font-size="13.5" font-style="italic">Source cost ≤ [γ<tspan baseline-shift="sub" font-size="11">c</tspan> C<tspan baseline-shift="sub" font-size="11">i</tspan> − E<tspan baseline-shift="sub" font-size="11">a,i</tspan><tspan baseline-shift="super" font-size="11">sofar</tspan>(t)]<tspan baseline-shift="super" font-size="11">+</tspan></text>
+  <text x="531" y="422" text-anchor="middle" font-size="15" fill="#555555">Battery checks: Eq. (3.9); CH reserve</text>
+
+  <rect x="692"  y="332" width="290" height="110" rx="5" ry="-55" fill="#ffffff" stroke="#111111" stroke-width="1.2" filter="url(#soft)"/>
+  <rect x="692"  y="332" width="290" height="22"  rx="5" ry="-55" fill="#111111"/>
+  <rect x="692"  y="348" width="290" height="6"   fill="#111111"/>
+  <text x="837" y="347" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">b3.  Route economy</text>
+  <text x="837" y="390" text-anchor="middle" font-size="13.5" font-style="italic">relay_cost  &lt;  (1 &#8722; &#961;<tspan baseline-shift="sub" font-size="11">g</tspan>) &#183; direct_cost</text>
+  <text x="837" y="422" text-anchor="middle" font-size="15" fill="#555555">Eq. (5.4)</text>
+
+  <rect x="998"  y="332" width="290" height="110" rx="5" ry="-55" fill="#ffffff" stroke="#7a0019" stroke-width="1.4" stroke-dasharray="5 3" filter="url(#soft)"/>
+  <rect x="998"  y="332" width="290" height="22"  rx="5" ry="-55" fill="#7a0019"/>
+  <rect x="998"  y="348" width="290" height="6"   fill="#7a0019"/>
+  <text x="1143" y="347" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">b4.  D3QN reward</text>
+  <text x="1143" y="390" text-anchor="middle" font-size="13.5" font-style="italic" fill="#7a0019">r<tspan baseline-shift="sub" font-size="14">i</tspan> = r<tspan baseline-shift="sub" font-size="14">i</tspan><tspan baseline-shift="super" font-size="14">0</tspan> − λ<tspan baseline-shift="sub" font-size="14">i</tspan>δ<tspan baseline-shift="sub" font-size="14">i</tspan> if δ<tspan baseline-shift="sub" font-size="14">i</tspan> &gt; 0</text>
+  <text x="1143" y="422" text-anchor="middle" font-size="15" fill="#7a0019">Eq. (5.8); DROP: −A<tspan baseline-shift="sub" font-size="14">i</tspan>(t)</text>
+
+  <rect x="1304" y="332" width="290" height="110" rx="5" ry="-55" fill="#ffffff" stroke="#111111" stroke-width="1.2" filter="url(#soft)"/>
+  <rect x="1304" y="332" width="290" height="22"  rx="5" ry="-55" fill="#111111"/>
+  <rect x="1304" y="348" width="290" height="6"   fill="#111111"/>
+  <text x="1449" y="347" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">sidecar.  Tracking bound</text>
+  <text x="1449" y="390" text-anchor="middle" font-size="13.5" font-style="italic">limsup<tspan baseline-shift="sub" font-size="11">k</tspan> &#8495;[(R(k)&#8722;m)<tspan baseline-shift="super" font-size="11">2</tspan>]  &#8804;  &#951;<tspan baseline-shift="sub" font-size="11">c</tspan> &#963;<tspan baseline-shift="super" font-size="11">2</tspan> / (2&#8722;&#951;<tspan baseline-shift="sub" font-size="11">c</tspan>)</text>
+  <text x="1449" y="418" text-anchor="middle" font-size="12.5" fill="#555555">Eq. (4.12); conditional-mean model</text>
+  <text x="1449" y="434" text-anchor="middle" font-size="12.5" fill="#555555">Conditional-mean scalar reference bound</text>
+
+  <line x1="370" y1="387" x2="386" y2="387" stroke="#7a0019" stroke-width="1" stroke-dasharray="5 3" marker-end="url(#arR)"/>
+  <line x1="676" y1="387" x2="692" y2="387" stroke="#111111" stroke-width="1" marker-end="url(#arB)"/>
+  <line x1="982" y1="387" x2="998" y2="387" stroke="#111111" stroke-width="1" marker-end="url(#arB)"/>
+
+  <path d="M165,450 L165,496 L1083,496 L1083,450" stroke="#7a0019" stroke-width="1" fill="none" stroke-dasharray="5 3" marker-end="url(#arR)"/>
+  <text x="684" y="510" font-size="15" fill="#7a0019" font-style="italic" text-anchor="middle">credit balance feeds the D3QN reward</text>
+
+
+  <line x1="40" y1="520" x2="1600" y2="520" stroke="#bbbbbb" stroke-width="0.6"/>
+
+  <g font-size="15">
+    <line x1="372" y1="540" x2="412" y2="540" stroke="#111111" stroke-width="1.2" marker-end="url(#arB)"/>
+    <text x="415" y="544">physical / exact  (battery, route-economy gate, settlement)</text>
+    <line x1="818" y1="540" x2="858" y2="540" stroke="#7a0019" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arR)"/>
+    <text x="861" y="544" fill="#7a0019">virtual / soft  (credit, quota, rates, recursion, reward)</text>
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+scenario,baseline,completion_relative_gain_pct,energy_reduction_pct,energy_per_task_reduction_pct,fnd_gain_pct,utility_gain_pct,budget_deviation_reduction_pct
+centered_bs,CHHFO,0.39000895559444526,59.18383416386605,59.34329715674313,20.019203072491585,20.44784988906132,
+centered_bs,D3QN-EH,0.0,-2.3915997491849916,-2.3916684078582717,0.0,0.0,
+centered_bs,ECB-Static,0.0,-2.3915997491849916,-2.3916684078582717,0.0,0.0,32.06646353965436
+centered_bs,ICR-HHODRL,0.0,25.202281262582638,25.23363035581,0.0,0.0,
+centered_bs,Two-Timescale-DRL,0.0,-2.3915997491849916,-2.3916684078582717,0.0,0.0,
