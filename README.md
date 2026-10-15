@@ -14,6 +14,26 @@ The original diagram is supplied in its original layout as editable SVG/PDF.
 The code, recorded results and reproduction instructions are publicly available at
 [mayanzu/ECB-HD-CR](https://github.com/mayanzu/ECB-HD-CR). No Zenodo DOI has been assigned.
 
+## BS execution and communication accounting
+
+HHO cluster-head selection, shared D3QN inference and replay training execute
+centrally at the base station (BS). Sensor nodes do not store D3QN weights or
+perform neural inference, and no model-weight broadcast is required. The
+[controller](algorithms/ecb_hd/ecb_hd_cr.py) maintains the shared online and
+target networks and replay buffer; the
+[control-plane wrapper](core/control_plane.py) charges sensor-side telemetry,
+routing commands and periodic topology reception in the BS-protocol audit.
+
+The stated message bit lengths are radio-energy budget assumptions. The
+simulator uses full-precision state variables and does not implement message
+serialization or state quantization; their effects are outside this
+protocol-energy evaluation. Reliable slotted links, known node locations and
+an unlimited BS power supply are assumed, while processor energy, contention,
+retransmissions and extra recovery signaling remain outside the model.
+
+This documentation clarification was added on 15 October 2026. The version
+1.0.0 release ZIP, simulation code and recorded numerical evidence are unchanged.
+
 ## Install
 
 Run all commands from this directory. Python 3.12.10 and CPU execution were
